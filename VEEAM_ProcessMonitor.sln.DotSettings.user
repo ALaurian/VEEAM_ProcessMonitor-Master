@@ -1,4 +1,22 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=76e33aef_002D2b0c_002D4bf5_002D8b46_002D59285d4474f5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::66E57D19-F922-4BAE-94EC-764827F3B878::net7.0::VEEAM_ProcessMonitor.NUnitTests.FoundProcesses&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Namespace&gt;VEEAM_ProcessMonitor&lt;/Namespace&gt;&#xD;
+      &lt;Project Location="C:\Users\lauri\Documents\GitHub\VEEAM_ProcessMonitor-Master\VEEAM_ProcessMonitor" Presentation="&amp;lt;VEEAM_ProcessMonitor&amp;gt;" /&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::66E57D19-F922-4BAE-94EC-764827F3B878::net7.0::VEEAM_ProcessMonitor.NUnitTests.KillProcesses&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Namespace&gt;VEEAM_ProcessMonitor&lt;/Namespace&gt;&#xD;
+      &lt;Project Location="C:\Users\lauri\Documents\GitHub\VEEAM_ProcessMonitor-Master\VEEAM_ProcessMonitor" Presentation="&amp;lt;VEEAM_ProcessMonitor&amp;gt;" /&gt;&#xD;
+    &lt;/And&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	
 	
 	
