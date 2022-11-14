@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cUdOU36D/ABknPtezzjl9t4AT8AjpcvjYwYO4SVQG+mqLroFrniXHOWBQcWLFmvN96TmwFBBtEQYYHMElciCiQ==",
+  "dgSpecHash": "ReMA/XjKpNtwfBqxVYcjbl0UGV+cR6OE1lK5cEZbLrkebvaBGLU5t4yCpQ2WrRbP7+dKHO3bm42ut4/G/m27eQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lauri\\RiderProjects\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor.csproj",
+  "projectFilePath": "C:\\Users\\lauri\\Documents\\GitHub\\VEEAM_ProcessMonitor-Master\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lauri\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\lauri\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",

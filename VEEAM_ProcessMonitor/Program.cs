@@ -20,14 +20,14 @@ using ThreadState = System.Diagnostics.ThreadState;
 //written in a certain way.
 
 //a few variables to fetch the arguments
-Console.WriteLine("Enter the process name: ");
-var processName = "notepad"; //args[0];
+//Console.WriteLine("Enter the process name: ");
+var processName = args[0];
 //maxLifetime is calculated as a double, because it is possible to specify fractions of minutes
-Console.WriteLine("Enter the maximum lifetime of the process in (fractional - 0.1) minutes: ");
-var maxLifetime = 0.1; //Double.Parse(args[1]);
+//Console.WriteLine("Enter the maximum lifetime of the process in (fractional - 0.1) minutes: ");
+var maxLifetime = Double.Parse(args[1]);
 //frequency is calculated as an integer, because it is not possible to give Thread.Sleep a double
-Console.WriteLine("Enter the monitoring frequency in (fractional - 0.1) minutes: ");
-var monitoringFrequency = (int)(0.05 * 1000); //args[2];
+//Console.WriteLine("Enter the monitoring frequency in (fractional - 0.1) minutes: ");
+var monitoringFrequency = (int)(Double.Parse(args[2]) * 1000);
 var dictionaryOfKillings = new Dictionary<string, DateTime>(); //honestly this test is making me seem like a serial killer
 var index = 0;
 
@@ -81,13 +81,12 @@ while (true)
     //register key press on Q
     if (Console.ReadKey().Key == ConsoleKey.Q)
     {
-        Console.WriteLine(thread.ThreadState);
         cts.Cancel();
         while (thread.ThreadState != System.Threading.ThreadState.Stopped)
         {
             
         }
-        Console.WriteLine(thread.ThreadState);
+        
         //prints the dictionary of killings
         Console.WriteLine("\nThe following processes were killed:\n");
         foreach (var process in dictionaryOfKillings)
@@ -96,7 +95,6 @@ while (true)
         }
         
         //stops the program
-        Console.WriteLine(thread.ThreadState);
         Console.WriteLine("\nPress any key to exit.");
         Console.ReadKey();
         break;

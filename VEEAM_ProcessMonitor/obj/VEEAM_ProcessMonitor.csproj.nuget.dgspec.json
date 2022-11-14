@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lauri\\RiderProjects\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor.csproj": {}
+    "C:\\Users\\lauri\\Documents\\GitHub\\VEEAM_ProcessMonitor-Master\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lauri\\RiderProjects\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor.csproj": {
+    "C:\\Users\\lauri\\Documents\\GitHub\\VEEAM_ProcessMonitor-Master\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lauri\\RiderProjects\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor.csproj",
+        "projectUniqueName": "C:\\Users\\lauri\\Documents\\GitHub\\VEEAM_ProcessMonitor-Master\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor.csproj",
         "projectName": "VEEAM_ProcessMonitor",
-        "projectPath": "C:\\Users\\lauri\\RiderProjects\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor.csproj",
+        "projectPath": "C:\\Users\\lauri\\Documents\\GitHub\\VEEAM_ProcessMonitor-Master\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor.csproj",
         "packagesPath": "C:\\Users\\lauri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lauri\\RiderProjects\\VEEAM_ProcessMonitor\\VEEAM_ProcessMonitor\\obj\\",
+        "outputPath": "C:\\Users\\lauri\\Documents\\GitHub\\VEEAM_ProcessMonitor-Master\\VEEAM_ProcessMonitor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
