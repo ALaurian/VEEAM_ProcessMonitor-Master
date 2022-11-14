@@ -20,27 +20,28 @@ public class NUnitTests
 
     [Test]
     [TestCase("notepad")]
-    public void FoundProcess(string processName)
+    public void FoundProcesses(string processName)
     {
-        var process = Process.GetProcessesByName(processName).FirstOrDefault();
-        Assert.That(process != null);
+        var processes = Process.GetProcessesByName(processName);
+        
+        Assert.That(processes.Any());
     }
 
     [Test]
     [TestCase("notepad")]
-    public void KillProcess(string processName)
+    public void KillProcesses(string processName)
     {
-        var process = Process.GetProcessesByName(processName).FirstOrDefault();
-        process?.Kill();
-        Assert.That(process.HasExited);
-    }
+        var processes = Process.GetProcessesByName(processName);
 
-    [Test]
-    [TestCase("notepad")]
-    public void GetStartTime(string processName)
-    {
-        var process = Process.GetProcessesByName(processName).FirstOrDefault();
-        Assert.That(process.StartTime != null);
+        if (processes.Any())
+        {
+            foreach (var process in processes)
+            {
+                process?.Kill();
+                Assert.That(process.HasExited);
+            } 
+        }
+
     }
 
     [Test]
