@@ -45,10 +45,9 @@ public class NUnitTests
     }
 
     [Test]
-    [TestCase(null)]
-    public void IsThreadRunning(CancellationTokenSource condition)
+    public void IsThreadRunning()
     {
-        condition = new CancellationTokenSource();
+        var condition = new CancellationTokenSource();
         var thread = new Thread(() =>
         {
             while (!condition.IsCancellationRequested)
@@ -61,10 +60,9 @@ public class NUnitTests
     }
 
     [Test]
-    [TestCase(null)]
-    public void IsThreadStopped(CancellationTokenSource condition)
+    public void IsThreadStopped()
     {
-        condition = new CancellationTokenSource();
+        var condition = new CancellationTokenSource();
         var thread = new Thread(() =>
         {
             while (!condition.IsCancellationRequested)
