@@ -28,7 +28,8 @@ var maxLifetime = Double.Parse(args[1]);
 //frequency is calculated as an integer, because it is not possible to give Thread.Sleep a double
 //Console.WriteLine("Enter the monitoring frequency in (fractional - 0.1) minutes: ");
 var monitoringFrequency = (int)(Double.Parse(args[2]) * 1000);
-var dictionaryOfKillings = new Dictionary<string, DateTime>(); //honestly this test is making me seem like a serial killer
+var dictionaryOfKillings =
+    new Dictionary<string, DateTime>(); //honestly this test is making me seem like a serial killer
 var index = 0;
 
 //Cancellation token for the while loop
@@ -42,33 +43,37 @@ var thread = new Thread(() =>
 {
     while (!cts.IsCancellationRequested)
     {
-        //I get the first process that matches the name, the test did not mention an array of processes
-        var process = Process.GetProcessesByName(processName).FirstOrDefault();
-        
-        if (process != null)
-        {
-            //fetch the process start time
-            var processStartTime = process.StartTime;
-            //calculates how many minutes the process has been running
-            var processLifetime = (DateTime.Now - processStartTime).TotalMinutes;
+        //Gets the process names
+        var processes = Process.GetProcessesByName(processName);
 
-            //checks if the process has been running for more than the allowed time
-            if (processLifetime > maxLifetime)
+        if (processes.Any())
+        {
+            foreach (var process in processes)
             {
-                //logs all the information in the console
-                Console.WriteLine(process.ProcessName + " was killed at " + DateTime.Now.ToString("yy-MMM-dd HH:mm:ss"));
-                //logs all the information in the dictionary with an index identifier (dictionaries do not allow duplicate keys)
-                dictionaryOfKillings.Add(index + "_" + process.ProcessName, DateTime.Now);
-                //increments the index
-                index++;
-                //...kills the process :(
-                process.Kill();
+                //fetch the process start time
+                var processStartTime = process.StartTime;
+                //calculates how many minutes the process has been running
+                var processLifetime = (DateTime.Now - processStartTime).TotalMinutes;
+
+                //checks if the process has been running for more than the allowed time
+                if (processLifetime > maxLifetime)
+                {
+                    //logs all the information in the console
+                    Console.WriteLine(process.ProcessName + " was killed at " +
+                                      DateTime.Now.ToString("yy-MMM-dd HH:mm:ss"));
+                    //logs all the information in the dictionary with an index identifier (dictionaries do not allow duplicate keys)
+                    dictionaryOfKillings.Add(index + "_" + process.ProcessName, DateTime.Now);
+                    //increments the index
+                    index++;
+                    //...kills the process :(
+                    process.Kill();
+                }
             }
+
+            //Without this monitoringFrequency this application would use a lot of CPU %, a very low number would also increase
+            //cpu usage
+            Thread.Sleep(monitoringFrequency);
         }
-    
-        //Without this monitoringFrequency this application would use a lot of CPU %, a very low number would also increase
-        //cpu usage
-        Thread.Sleep(monitoringFrequency);
     }
 });
 
@@ -84,20 +89,18 @@ while (true)
         cts.Cancel();
         while (thread.ThreadState != System.Threading.ThreadState.Stopped)
         {
-            
         }
-        
+
         //prints the dictionary of killings
         Console.WriteLine("\nThe following processes were killed:\n");
         foreach (var process in dictionaryOfKillings)
         {
             Console.WriteLine(process.Key + " at " + process.Value.ToString("yy-MMM-dd HH:mm:ss"));
         }
-        
+
         //stops the program
         Console.WriteLine("\nPress any key to exit.");
         Console.ReadKey();
         break;
     }
 }
-
